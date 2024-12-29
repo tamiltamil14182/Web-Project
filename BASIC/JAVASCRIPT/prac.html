@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stn="jsp@1404.com";
+        let sum=0;
+
+        for(let i=0; i<stn.length;i++){
+            let char=stn.charAt(i);
+            if(char>='0' && char<='9'){
+                sum+=+char
+            }
+        }
+        console.log(sum);
+
+        <!--THE END-->
+
+        let str='Javascript is very easy';
+        let arr=str.split(' ');
+        let res=" ";
+
+        for(let i=arr.length-1;i>=0;i--){
+            if(i>0){
+            res+=arr[i]+" ";
+            }
+        else
+        {
+            res+=arr[i];
+        }
+    }
+    console.log(res);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        img {
+            height: 200px !important;
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">🍿movies</a>
+
+            <div>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Search For Movies....." class="form-control" id="input-el">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid mt-3">
+        <div class="row">
+            <div class="col">
+                <h2>List Of Movies:-</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur hic tempore ea, error eius quaerat
+                    aliquid delectus porro voluptatem iste Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur hic tempore ea, error eius quaerat aliquid delectus porro voluptatem isteLorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Tenetur hic tempore ea, error eius quaerat aliquid delectus
+                    porro voluptatem isteLorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur hic tempore
+                    ea, error eius quaerat aliquid delectus porro voluptatem iste.</p>
+                <button class="btn btn-dark">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid mt-4">
+        <div class="row" id="display-data">
+
+        </div>
+    </section>
+
+
+    <div style="margin-bottom:500px"></div>
+
+
+    <script>
+
+        let m1 = { mId: "j101", titleName: "Pushpa", imgUrl: "https://m.media-amazon.com/images/M/MV5BNWU1ZWFhNGQtZDhlZC00ZWFlLTlmNmEtN2VmYmZiN2Y5ZmQ2XkEyXkFqcGc@._V1_.jpg", hero: "Allu Arjun", year: 2024 };
+
+        let m2 = { mId: "j102", titleName: "Bahubali", imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS55IWLBUMz15tV_QgGshhhlMgRHPpR30dw-g&s", hero: "Prabhas", year: 2019 };
+
+        let m3 = { mId: "j103", titleName: "Kgf", imgUrl: "https://rukminim2.flixcart.com/image/850/1000/l3bx5e80/poster/p/x/m/small-kgf-poster-kgf-yash-movie-poster-for-room-kgf-chapter-2-original-imageh8qchumcz8k.jpeg?q=90&crop=false", hero: "Yash", year: 2018 };
+
+        let m4 = { mId: "j104", titleName: "Devara", imgUrl: "https://static.toiimg.com/photo/113587323.jpeg", hero: "Ntr", year: 2024 };
+
+        let movies = [m1, m2, m3, m4];
+
+        function displayMovies(titles) {
+            if (titles.length != 0) {
+                let eachMovie = '';
+                for (let movie of titles) {
+                    eachMovie += `<div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="${movie.imgUrl}" alt="" class="img-fluid">
+                    </div>
+                    <div class="card-body text-center">
+                        <h2>${movie.titleName}</h2>
+                        <h6>${movie.hero}</h6>
+                        <h5>🗓${movie.year}</h5>
+                    </div>
+                </div>
+            </div>`;
+                }
+                document.getElementById('display-data').innerHTML = eachMovie;
+            }
+        }
+        displayMovies(movies);
+
+
+        //search data
+        let searchEl = document.getElementById('input-el');
+
+        searchEl.addEventListener('keyup', function () {
+            let enteredVal = searchEl.value;
+            let filteredData = searchData(enteredVal, movies);
+            if (enteredVal.length == 0) document.getElementById('display-data').innerHTML = "List Is Empty";
+            else displayMovies(filteredData);
+        })
+
+
+        function searchData(val, mArr) {
+            val = val.toLowerCase().trim();
+            let filteredMovies = [];
+            for (let movie of movies) {
+                let orgMovieName = movie.titleName.toLocaleLowerCase().trim();
+
+                if (orgMovieName.includes(val)) {
+                    filteredMovies.push(movie);
+                }
+
+            }
+            return filteredMovies;
+        }
+    </script>
+</body>
+
+</html>

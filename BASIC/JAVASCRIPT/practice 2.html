@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+      let n=5;
+      let res="";
+      let count=1;
+      main()
+      function main(){
+        for(let i=1;i<=n;i++){
+            for(let j=1;j<=i;j++){
+                res+=count+"\t";
+                count++;
+            }
+        res+="\n";
+        }
+      }
+      console.log(res);
+      
+      let s=5;
+      let sum="";
+      pattern()
+      function pattern(){
+        for(let i=s;i>=1;i--){
+            for(let j=1;j<=i;j++){
+                sum+="*";
+            }
+            sum+="\n";
+        }
+      }
+      console.log(sum);
+    </script>
+</head>
+<body>
+    <h1>tamil</h1>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>RELATIVE & ABSOLUTE</title>
+    <style>
+          .GP {
+           height: 625px;
+           width: 100%;
+           border: 2px solid black;
+           background-color: brown;
+          }
+          .parent{
+            height: 400px;
+            width: 600px;
+            margin: 120px auto;
+            border: 2px solid black;
+            background-color: aqua;
+            position: relative;
+            justify-content: center;
+          }
+          .child{
+            position: relative;
+            height: 200px;
+            margin: 30px;
+            margin-left: 100px;
+            margin-top: 55px;
+            width: 300px;
+            padding: 45px ;
+            border: 2px solid black;
+            background-color: pink;
+            position: absolute;
+          }
+    </style>
+</head>
+<body>
+    <div class="GP">
+    <div class="parent">
+    <div class="child">
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transform 1</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 400px;
+        border: 2px solid skyblue;
+        border-radius: 20px;
+        margin: 100px auto;
+        box-shadow:0 0 200px gold;
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        transition: all 0.5s linear 0s;
+      }
+      .slide {
+        background-color: cornflowerblue;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        transition: all 5s linear 0s;
+      }
+      .container:hover > .slide {
+        transform: translateY(-1000px);
+      }
+      .container:hover > img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://w0.peakpx.com/wallpaper/286/24/HD-wallpaper-thiruchendur-murugan.jpg" alt="" />
+      <div class="slide"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+.header{
+    background-color: rgb(92, 92, 206);
+    color: rgb(3, 3, 83);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+h3{ 
+    font-size: xx-large;
+    margin-left: 10px;
+}
+.head{
+    color: white;
+    font-size: small;
+}
+.input{
+    width: 400px;
+    height: 50px;
+}
+.option{
+    margin-left: 50px;
+    width: 55px;
+    height: 30px;
+    color: blue;
+}
+nav{
+    text-decoration: none;
+    margin-left: 200px;
+    font-size: x-large;
+}
+.nav{
+    margin-left: 100px;
+}
+nav:hover{
+    color: red;
+}
+.name{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.name>a{
+    text-decoration: none;
+    margin: 55px;
+}
+a:hover{
+    text-size-adjust: 20px;
+}
+.name>a:hover{
+    color: red;
+}
+h1{
+    text-align: center;
+    margin-top: 0px;
+}
+.product{
+    height: 350px;
+    width: 250px;
+    background-color: aqua;
+    border: 10px solid black;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 10px;
+    margin: 32px;
+}
+button{
+    background-color: skyblue;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+button:hover{
+    color:red;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 28px;
+}

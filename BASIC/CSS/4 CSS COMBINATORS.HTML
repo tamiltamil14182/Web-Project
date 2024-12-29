@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>CSS COMBINATORS</title>
+<style>
+      .header>h1>span
+      {
+        background-color: black;
+        color: aquamarine;
+      }
+      .main h2
+      {
+        background-color: blue;
+        color: blanchedalmond;
+      }
+      h2+h3
+      {
+        background-color: brown;
+        color: coral;
+      }
+      h1~h4
+      {
+        background-color: crimson;
+        color: cyan;
+      }
+</style>
+</head>
+<body>
+    <div class="header">
+     <h1>child selector  <span>span tag</span></h1>
+     <h2>decendent selector</h2>
+     <h3>adjacent selector</h3>
+     <h4>general sibiling selector</h4>
+     </div>
+     <hr>
+     <div class="main">
+        <h1>child selectors</h1>
+        <h2>child selectors  <span>span tag</span></h2>
+        </div>
+        <hr>
+    <div class="footer">
+            <h1>child selectors</h1>
+            <h2>child selectors</h2>
+            <h3>child selectors</h3>
+            </div>
+     </body>
+     </html>
